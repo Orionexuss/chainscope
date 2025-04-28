@@ -18,9 +18,12 @@ const Navbar = () => {
         <button className="bg-transparent border-2 w-24 h-10 sm:w-25 sm:h-10 cursor-pointer rounded-full">
           Login
         </button>
-        <button className="hidden sm:block animate-background w-24 h-10 sm:w-25 sm:h-10 rounded-full bg-gradient-to-r from-[#00B594] via-[#4D63AC] to-[#8A009F] bg-[length:_400%_400%] p-1 [animation-duration:_6s] cursor-pointer">
-          Sign Up
-        </button>
+        <div className="relative">
+          <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#00B594] via-[#4D63AC] to-[#8A009F] opacity-75 blur"></div>
+          <button className="hidden sm:block relative animate-background w-24 h-10 sm:w-25 sm:h-10 rounded-full bg-gradient-to-r from-[#00B594] via-[#4D63AC] to-[#8A009F] bg-[length:_400%_400%] p-1 [animation-duration:_6s] cursor-pointer">
+            Sign Up
+          </button>
+        </div>
       </nav>
     </header>
   );
