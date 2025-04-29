@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div
         className="bg-radial-[at_50%_20%] via-[#016556] via-88% from-black from-50% to-[#35002C] w-screen h-screen fixed
-        sm:bg-radial-[at_50%_15%] sm:via-[#016556] sm:via-80% sm:from-black sm:from-66% sm:to-[#35002C]"
+        sm:bg-radial-[at_50%_15%] sm:via-[#016556] sm:via-85% sm:from-black sm:from-68% sm:to-[#35002C]"
       >
         <Navbar />
         <Hero />

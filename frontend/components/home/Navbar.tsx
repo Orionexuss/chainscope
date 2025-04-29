@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -11,10 +12,14 @@ const Navbar = () => {
         <button className="bg-transparent border-2 w-24 h-10 sm:w-25 sm:h-10 cursor-pointer rounded-full">
           Login
         </button>
-        <div className="relative">
-          <div className="hidden sm:block absolute -inset-0.5 rounded-xl bg-gradient-to-r from-primary via-[#4D63AC] to-secondary opacity-75 blur"></div>
-          <button className="hidden sm:block relative animate-background w-24 h-10 sm:w-25 sm:h-10 rounded-full bg-gradient-to-r from-primary via-[#4D63AC] to-secondary bg-[length:_400%_400%] p-1 [animation-duration:_6s] cursor-pointer">
-            Sign Up
+        <div className="relative w-fit mx-auto">
+          <div className="hidden sm:block absolute -inset-1 rounded-xl bg-gradient-to-r from-secondary via-cyan-700 to-secondary opacity-75 blur"></div>
+          <button className="hidden relative sm:inline-flex items-center justify-center p-0.5  font-medium rounded-full bg-gradient-to-br from-fuchsia-600 to-blue-600 cursor-pointer">
+          <Link href={`/auth/register`} >
+          <span className="hidden sm:relative sm:flex items-center justify-center font-(family-name:--abel) h-9 w-25 text-[22px] transition-all ease-in duration-75 sm:bg-black rounded-full sm:group-hover:bg-transparent group-hover:dark:bg-transparent;">
+          Sign Up
+          </span>
+          </Link>
           </button>
         </div>
       </nav>
