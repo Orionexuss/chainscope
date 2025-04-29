@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  --font-roboto: var(--font-roboto)
+}
+
 @theme {
   --animate-background: background-move ease infinite;
 
