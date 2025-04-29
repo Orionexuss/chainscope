@@ -17,7 +17,7 @@ const Hero = () => {
           decisions backed by on-chain data.
         </p>
       </div>
-      <div className="relative w-fit mx-auto mt-6 md:mt-3">
+      <div className="relative mx-auto mt-6 w-fit md:mt-3">
         <button className="hero-button group">
           <span className="hero-button-text">TRY IT &#62;</span>
         </button>

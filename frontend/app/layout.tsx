@@ -17,7 +17,7 @@ const abel = localFont({
       path: "./fonts/Abel/Abel-Regular.ttf",
     },
   ],
-  variable: "--abel"
+  variable: "--abel",
 });
 
 const roboto = localFont({
@@ -28,36 +28,36 @@ const roboto = localFont({
     {
       path: "./fonts/Roboto/Roboto-Thin.ttf",
       weight: "100",
-      style: 'normal'
+      style: "normal",
     },
     {
       path: "./fonts/Roboto/Roboto-ExtraLight.ttf",
       weight: "200",
-      style: "normal"
+      style: "normal",
     },
     {
       path: "./fonts/Roboto/Roboto-Regular.ttf",
       weight: "400",
-      style: "normal"
+      style: "normal",
     },
     {
       path: "./fonts/Roboto/Roboto-Medium.ttf",
       weight: "500",
-      style: "normal"
+      style: "normal",
     },
     {
       path: "./fonts/Roboto/Roboto-SemiBold.ttf",
       weight: "600",
-      style: "normal"
+      style: "normal",
     },
     {
       path: "./fonts/Roboto/Roboto-Bold.ttf",
       weight: "700",
-      style: "normal"
-    }
+      style: "normal",
+    },
   ],
-  variable: "--font-roboto"
-})
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -71,7 +71,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${koulen.variable} ${abel.variable} ${roboto.variable}`}>{children}</body>
+      <body
+        className={`${koulen.variable} ${abel.variable} ${roboto.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
