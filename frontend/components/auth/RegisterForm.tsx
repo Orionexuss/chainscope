@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaApple, FaGithub, FaGoogle } from "react-icons/fa";
 
@@ -9,64 +8,104 @@ interface InputFieldProps {
   id: string;
 }
 
-const InputField = ({ label, id, type }: InputFieldProps): React.ReactNode => {
-  return (
-    <div>
-      <label htmlFor={id}>{label}</label> <br />
-      <input
-        type={type}
-        className="w-full mt-2 rounded-sm border border-gray-700 px-2 py-2 font-extralight"
-        placeholder={label}
-      />
-    </div>
-  );
-};
+const inputClass =
+  "mt-2 w-full rounded-sm border border-gray-500 px-2 py-2 font-extralight";
 
-const RegisterForm = () => {
-  return (
-    <div className="font-roboto flex h-screen items-center ">
-      <div className="flex-1 flex justify-center px-5 bg-neutral-900 items-center h-screen">
-        <div className="bg-blue-200 h-[35%] w-full">
-          IMAGE
-        </div>
+const InputField: React.FC<InputFieldProps> = ({ label, id, type }) => (
+  <div>
+    <label htmlFor={id}>{label}</label>
+    <br />
+    <input
+      type={type}
+      id={id}
+      name={id}
+      className={inputClass}
+      placeholder={label}
+    />
+  </div>
+);
+
+const CreatorText: React.FC = () => (
+  <div className="hidden h-full flex-1 items-center justify-center bg-neutral-950 px-5 sm:flex">
+    <div className="flex h-full w-full flex-col gap-7 rounded-2xl px-5 py-3 text-white">
+      <div className="h-18 w-18 mt-auto overflow-hidden rounded-full">
+        <Image
+          src="/Me.jpg"
+          className="h-full w-full object-fill"
+          alt="creator"
+          width={50}
+          height={50}
+        />
       </div>
-      <div className="flex-1/4 flex justify-center h-full text-white">
-        <div className="flex flex-col gap-5 justify-center h-full w-100">
-          <div>
+      <p className="z-10 clear-left font-light">
+        "I created Chainscope to help you invest smarter. My mission? To create
+        tools for you that last, scale, and deliver real value for those who
+        live the crypto world every day."
+      </p>
+      <div className="mb-15 mt-auto">
+        <h3 className="text-[18px] font-bold">Sebastian Vargas</h3>
+        <p>Founder, Chainscope</p>
+      </div>
+    </div>
+  </div>
+);
+
+const socialButtonStyle =
+  "flex flex-1 cursor-pointer justify-center rounded-xl border border-gray-700 p-4 text-white";
+
+const RegisterForm: React.FC = () => {
+  return (
+    <div className="font-roboto relative flex h-screen w-screen items-center overflow-hidden">
+      {/* Background blobs */}
+      <div className="bg-primary pointer-events-none absolute left-[35%] top-[10%] h-[35rem] w-[40rem] rounded-full opacity-50 blur-[8rem] filter" />
+      <div className="pointer-events-none absolute bottom-[5%] left-[60%] h-[35rem] w-[40rem] rounded-full bg-[#441578] opacity-90 blur-[8rem] filter" />
+
+      <CreatorText />
+
+      <div className="flex-1/4 py-15 z-10 flex h-screen justify-center text-white sm:h-fit sm:py-0">
+        <div className="z-1 flex h-full flex-col justify-center gap-5 rounded-2xl border border-[#E0E0E0] bg-[rgba(0,0,0,0.6)] p-8 px-4 shadow-[0_4px_15px_rgba(198,198,198,0.5)] sm:w-[80%] sm:p-5">
+          <div className="flex justify-center">
             <h1 className="text-4xl font-medium">Create an account</h1>
           </div>
-          <div>
-            <p className="font-light">
-              Let's get started. Fill in the details below to create your account
-            </p>
-          </div>
-          <form action="" className="flex flex-col gap-5">
+
+          <p className="font-light">
+            Let's get started. Fill in the details below to create your account.
+          </p>
+
+          <form className="flex flex-col gap-5">
             <InputField label="Name" id="name" type="text" />
             <InputField label="Password" id="password" type="password" />
             <InputField label="Email" id="email" type="email" />
 
             <div className="flex justify-center">
-              <button className="cursor-pointer w-full p-2 rounded-md bg-white text-black">
-                <Link href={``}><span className="">Sign Up</span></Link>
+              <button
+                type="submit"
+                className="w-full cursor-pointer rounded-md bg-white p-2 text-black"
+              >
+                Sign Up
               </button>
             </div>
-            <div className="flex items-center my-4">
-              <div className="flex-grow h-px bg-gray-800" />
-              <span className="mx-4 text-sm text-gray-400">OR SIGN IN WITH</span>
-              <div className="flex-grow h-px bg-gray-800" />
+
+            {/* Divider */}
+            <div className="flex items-center">
+              <div className="h-px flex-grow bg-gray-800" />
+              <span className="mx-4 text-sm text-gray-400">
+                OR SIGN IN WITH
+              </span>
+              <div className="h-px flex-grow bg-gray-800" />
             </div>
-            <div className="flex justify-center">
-              <div className="flex space-x-4 w-full">
-                <button className="p-4 flex-1 flex justify-center border rounded-xl cursor-pointer text-white border-gray-700">
-                  <FaGithub size={20} />
-                </button>
-                <button className="p-4 flex-1 flex justify-center border rounded-xl cursor-pointer text-white border-gray-700">
-                  <FaGoogle size={20} />
-                </button>
-                <button className="p-4 flex-1 flex justify-center border rounded-xl cursor-pointer text-white border-gray-700">
-                  <FaApple size={20} />
-                </button>
-              </div>
+
+            {/* Social buttons */}
+            <div className="flex w-full space-x-4">
+              <button type="button" className={socialButtonStyle}>
+                <FaGithub size={20} />
+              </button>
+              <button type="button" className={socialButtonStyle}>
+                <FaGoogle size={20} />
+              </button>
+              <button type="button" className={socialButtonStyle}>
+                <FaApple size={20} />
+              </button>
             </div>
           </form>
         </div>

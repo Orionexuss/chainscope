@@ -36,6 +36,11 @@ const roboto = localFont({
       style: "normal",
     },
     {
+      path: "./fonts/Roboto/Roboto-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "./fonts/Roboto/Roboto-Regular.ttf",
       weight: "400",
       style: "normal",
