@@ -139,6 +139,10 @@
   }
 }
 
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
 @utility hero-container {
   @apply flex h-screen flex-col gap-7 px-3 py-[8vh] text-center text-white sm:gap-[4vh] lg:py-[1vw];
 }
