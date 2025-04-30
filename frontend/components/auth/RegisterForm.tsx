@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { FaApple, FaGithub, FaGoogle } from "react-icons/fa";
+import AuthProviders from "./AuthProviders";
 
 interface InputFieldProps {
   label: string;
@@ -51,9 +51,6 @@ const CreatorText: React.FC = () => (
   </div>
 );
 
-const socialButtonStyle =
-  "flex flex-1 cursor-pointer justify-center rounded-xl border border-gray-700 p-4 text-white";
-
 const RegisterForm: React.FC = () => {
   const formRef = useRef<HTMLDivElement | null>(null);
 
@@ -97,6 +94,7 @@ const RegisterForm: React.FC = () => {
                 Sign Up
               </button>
             </div>
+          </form>
 
             {/* Divider */}
             <div className="flex items-center">
@@ -108,17 +106,7 @@ const RegisterForm: React.FC = () => {
             </div>
 
             {/* Social buttons */}
-            <div className="flex w-full space-x-4">
-              <button type="button" className={socialButtonStyle}>
-                <FaGithub size={20} />
-              </button>
-              <button type="button" className={socialButtonStyle}>
-                <FaGoogle size={20} />
-              </button>
-              <button type="button" className={socialButtonStyle}>
-                <FaApple size={20} />
-              </button>
-            </div>
+            <AuthProviders/>
             <div className="flex justify-center">
               <span>
                 Already have an account?{" "}
@@ -127,7 +115,6 @@ const RegisterForm: React.FC = () => {
                 </a>
               </span>
             </div>
-          </form>
         </div>
       </div>
     </div>
