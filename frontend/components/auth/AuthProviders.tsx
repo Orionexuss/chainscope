@@ -1,4 +1,8 @@
-import { handleGoogleSignIn, handleGithubSignIn, handleDiscordSignIn } from "@/lib/actions";
+import {
+  handleGoogleSignIn,
+  handleGithubSignIn,
+  handleDiscordSignIn,
+} from "@/lib/actions";
 import { FaDiscord, FaGithub, FaGoogle } from "react-icons/fa";
 
 const socialButtonStyle =

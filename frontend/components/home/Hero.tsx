@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <div className="hero-container">
@@ -19,7 +21,9 @@ const Hero = () => {
       </div>
       <div className="relative mx-auto mt-6 w-fit md:mt-3">
         <button className="hero-button group">
-          <span className="hero-button-text">TRY IT &#62;</span>
+          <Link href={`/auth/register`} className="hero-button-text">
+            <span>TRY IT &#62;</span>
+          </Link>
         </button>
       </div>
     </div>
