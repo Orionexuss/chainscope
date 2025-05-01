@@ -96,25 +96,23 @@ const RegisterForm: React.FC = () => {
             </div>
           </form>
 
-            {/* Divider */}
-            <div className="flex items-center">
-              <div className="h-px flex-grow bg-gray-800" />
-              <span className="mx-4 text-sm text-gray-400">
-                OR SIGN IN WITH
-              </span>
-              <div className="h-px flex-grow bg-gray-800" />
-            </div>
+          {/* Divider */}
+          <div className="flex items-center">
+            <div className="h-px flex-grow bg-gray-800" />
+            <span className="mx-4 text-sm text-gray-400">OR SIGN IN WITH</span>
+            <div className="h-px flex-grow bg-gray-800" />
+          </div>
 
-            {/* Social buttons */}
-            <AuthProviders/>
-            <div className="flex justify-center">
-              <span>
-                Already have an account?{" "}
-                <a href="" className="underline">
-                  Sign in
-                </a>
-              </span>
-            </div>
+          {/* Social buttons */}
+          <AuthProviders />
+          <div className="flex justify-center">
+            <span>
+              Already have an account?{" "}
+              <a href="" className="underline">
+                Sign in
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
