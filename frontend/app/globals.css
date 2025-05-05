@@ -3,9 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --color-primary:
-  ;
+@theme inline {
+  --font-roboto: var(--font-roboto);
 }
 
 @theme {
@@ -69,13 +68,13 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.7 0.15 180);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.5 0.25 320);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: oklch(0.5 0.25 320);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -138,4 +137,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@utility bg-gradient {
+  background-image: linear-gradient(
+    270deg,
+    var(--primary),
+    #4d63ac,
+    var(--secondary),
+    var(--primary)
+  );
+  background-size: 400% 400%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@utility gradient-text {
+  @apply inline-block bg-gradient-to-r from-[var(--primary)] via-indigo-400 to-fuchsia-500 bg-clip-text text-transparent;
 }
