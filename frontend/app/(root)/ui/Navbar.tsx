@@ -10,7 +10,11 @@ const Navbar = () => {
       </div>
       <nav className="font-(family-name:--abel) ml-auto mr-5 flex text-[18px] text-white sm:flex-row sm:gap-5 sm:text-[22px]">
         <button className="sm:w-25 h-10 w-24 cursor-pointer rounded-full border-2 bg-transparent sm:h-10">
-          Login
+          <Link href={`/auth/login`}>
+            <span className="w-full h-full flex items-center justify-center">
+              Login
+            </span>
+          </Link>
         </button>
         <div className="relative mx-auto w-fit">
           <div className="from-secondary to-secondary absolute -inset-1 hidden rounded-xl bg-gradient-to-r via-cyan-700 opacity-75 blur sm:block"></div>
