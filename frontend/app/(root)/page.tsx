@@ -1,5 +1,5 @@
 import Hero from "./ui/Hero";
-import Navbar from "./ui/Navbar";
+import Navbar from "./ui/Navbar"
 
 export default function Home() {
   return (
