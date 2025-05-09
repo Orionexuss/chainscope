@@ -9,7 +9,6 @@ const Navbar = () => {
         <Image src="/logo.png" width={230} height={190} alt="Logo" />
       </div>
       <nav className="font-(family-name:--abel) ml-auto mr-5 flex text-[18px] text-white sm:flex-row sm:gap-5 sm:text-[22px]">
-
         <Link href={`/auth/login`}>
           <button className="sm:w-25 h-10 w-24 cursor-pointer rounded-full border-2 bg-transparent sm:h-10">
             <span className="w-full h-full flex items-center justify-center">
