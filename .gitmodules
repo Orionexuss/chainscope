@@ -1,0 +1,3 @@
+[submodule "backend/app/services/internal"]
+	path = backend/app/services/internal
+	url = git@github.com:Orionexuss/chainscope-core.git
