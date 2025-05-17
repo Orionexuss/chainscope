@@ -1,5 +1,3 @@
-import asyncio
-
 from solana.rpc.commitment import Commitment
 from solana.rpc.websocket_api import connect
 from solders.pubkey import Pubkey
