@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from .endpoints import wallets, users
+from .routes import wallets, users
 
 route = APIRouter(prefix='/v1')
 
