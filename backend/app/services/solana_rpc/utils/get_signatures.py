@@ -6,7 +6,7 @@ from solders.pubkey import Pubkey
 def get_signatures(
     pubkey: str,
     client_url: str = "wss://api.devnet.solana.com",
-):
+) -> list[str]:
     solana_client = Client(client_url)
     all_signatures = []
 
